@@ -10,7 +10,7 @@
 
 ![[Figure 1-14.png]]
 # Layer 5 Application: HTTP overview
-Now, you open a web browser in your computer. Type in your question, and click a hyperlink. However, what you see is not actually stored on your local storage. Your web browser have to control your device to send a request to a remote sever for retrieving the web page.
+Now, you open a web browser in your PC. Type in your question, and click on a hyperlink. However, what you see is not actually stored on your local storage. Your web browser have to control your device to send a request to a remote sever for retrieving the web page.
 
 ![[Figure 1-5.png]]
 ![[Figure 1-6.png]]
