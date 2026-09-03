@@ -46,7 +46,7 @@ Router works in the same way of each post office: check the destination **IP add
 
 If you want to tell something to your neighbor, you probably won't write a letter. Instead, you just need to know which house is your neighbor's home, and choose a good time to visit him. That's what happened in these two layers.
 
-The two work together quite closely; in fact, some standards define both the data-link and physical layer functions. **The physical layer** defines the cabling and energy (for example, electrical signals) that flow over the cables. **The datalink layer** provides methods for **LAN switching** which means communication between directly Ethernet-connected devices. 
+The two work together quite closely; in fact, some standards define both the data-link and physical layer functions. **The physical layer** defines the cabling and energy (for example, electrical signals) that flow over the cables. **The datalink layer** provides methods for **LAN switching**, which means communication between directly Ethernet-connected devices. 
 
 
 # Adjacent Layer Interactions
