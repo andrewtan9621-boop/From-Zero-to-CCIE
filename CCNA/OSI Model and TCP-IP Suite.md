@@ -66,6 +66,17 @@ Then the neighboring system performs the opposite process, the additions of each
 **Same-layer interaction** refers to interaction between the same layer on different hosts. Communication between the application layers of the two different systems is called same-layer interaction. Same-layer interaction allows the application layer to perform its function.
 ![[Table 1-3.png]]
 
+# Example for Hosts Communication
+
+![[Example-encapsulation.png]]
+
+An application on Host A wants to communicate with an application on Host B. The data is encapsulated via the Transport, Internet and Link layers. Then it is forward over to the Router, probably via Ethernet UTP copper cabling.
+
+Routers are layer 3 devices, so they want to know the layer 3 IP address to know where to forward the data next. So, de-encapsulation occurs at the Link layer, and then at the Internet layer the Router looks at the destination IP address to know where to send the packet. Then, the packet is once again encapsulated to make a Frame. From here it is sent to another router, perhaps over long-distance fiber cabling. The second Router do the same thing and sent over some medium to Host B.
+
+At Host B, de-encapsulation takes place once more. At the link layer it is a frame. The header and trailer are removed, and it becomes a packet. At the Internet layer the header is removed, and it becomes a segment. Finally, the transport layer header is removed, and the application layer on Host B receives the data and interacts with the application on Host B.
+
+
 >[Jeremy's IT lab CCNA Day 3](https://www.youtube.com/watch?v=yM-XNq9ADlI&list=PLxbwE86jKRgMpuZuLBivzlM8s2Dk5lXBQ&index=6)
 >
 >CCNA 200-301 Official Guidebook Volume1 Chapter 1
