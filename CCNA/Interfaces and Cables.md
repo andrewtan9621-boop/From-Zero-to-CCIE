@@ -1,4 +1,4 @@
-The [[OSI Model and TCP-IP Suite#Layer 2 & 1 Datalink and Physical|Physical Layer 1]] sends and receives **bits** as electrical, optical, or radio signals over the medium.
+The [[Layer 1]], Physical Layer, sends and receives **bits** as electrical, optical, or radio signals over the medium.
 
 (I suppose you've already known the fundamental knowledge about some terms like "bits", "duplex", etc. If you don't, google it or watch videos in the end.)
 

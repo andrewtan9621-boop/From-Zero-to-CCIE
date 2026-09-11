@@ -1,4 +1,4 @@
-Switches operate at [[OSI Model and TCP-IP Suite#Layer 2 & 1 Datalink and Physical|Layer 2]] and is responsible for communication within **LANs**.
+Switches operate at Layer 2 and is responsible for communication within **LANs**.
 
 The Data-Link layer provides **node-to-node** connectivity and data transfer. It defines how data is formatted for transmission over a physical medium and detects and possibly corrects Physical layer errors.
 
@@ -12,7 +12,7 @@ Routers divide network into LANs. For example, there are four LANs:
 
 # Ethernet Frames
 
-In this layer, the data are encapsulated and transmitted in **Frames**. Review the [[OSI Model and TCP-IP Suite|PDUs]] in Layer 2. Packets are encapsulated with **Ethernet Header** and **Trailer**. Let's introduce more details about them.
+In this layer, the data are encapsulated and transmitted in **Frames**. Review the PDUs in Layer 2. Packets are encapsulated with **Ethernet Header** and **Trailer**. Let's introduce more details about them.
 
 ![[Eth. Header and Trailer.png]]
 
@@ -56,6 +56,9 @@ The addresses used in Ethernet are the **destination and source MAC addresses**.
 |---|---|
 |**0x0800**=IPv4|‘0x’ indicate [hexadecimal](https://dictionary.cambridge.org/zhs/%E8%AF%8D%E5%85%B8/%E8%8B%B1%E8%AF%AD-%E6%B1%89%E8%AF%AD-%E7%AE%80%E4%BD%93/hexadecimal?q=hexadecimal+), ‘0800’ in hexadecimal is equal to ‘2048’ in [decimal](https://dictionary.cambridge.org/zhs/%E8%AF%8D%E5%85%B8/%E8%8B%B1%E8%AF%AD-%E6%B1%89%E8%AF%AD-%E7%AE%80%E4%BD%93/decimal?q=decimal+)|
 |**0x86DD**=IPv6|‘86DD’ in hexadecimal is equal to ‘34525’ in decimal|
+|**0x0806**=ARP|
+
+![[ARP Type.png]]
 
 ## Ethernet Trailer
 
@@ -76,6 +79,14 @@ Therefore the minimum payload size is 46 bytes (64 bytes-18 bytes).
 
 If the payload is less than 46 bytes, [padding](https://dictionary.cambridge.org/dictionary/english-chinese-traditional/padding?q=padding+) bytes are added, and these bytes are all 0s.
 
+For example, if we If we send 36-byte [[Layer 3 Ping|pings]], there should be 10 bytes of padding, because the minimum payload size for an Ethernet frame is 46 bytes. 
+
+![[Padding.png]]
+
+These "0" are hexadecimal zeros. Each hexadecimal digit is 4 bits. 10 bytes of padding means there should be 20 zeros.
+
+
+
 # MAC address
 
 A **MAC address** is a 6-byte, 12 hexadecimal numbers, physical address assigned to the device when it is made, also known as **Burned-In address**. 
@@ -94,7 +105,7 @@ The MAC address is globally unique, no two devices in the world should have the 
 
 ![[LAN Switching 1.png]]
 
-Look at the interface name F0/1. **F** means [[Layer 1 Interfaces and Cables#Ethernet|Fast Ethernet]], so these are 100 Mbps interfaces.
+Look at the interface name F0/1. **F** means Fast Ethernet, so these are 100 Mbps interfaces.
 
 PC 1 sends the frame through its **Network Interface Card (NIC)**, which is connected to SW1 and SW1 receives the frame. 
 
@@ -112,7 +123,7 @@ But SW1 doesn’t know where the destination is. This frame is called **Unknown 
 
 For unknown unicast frame, switch has only one option, that is to flood the frame. **Flood means to forward the frame out of all of its interfaces, except the one it receives the packet on.** So, SW1 copies the frame and sends it out its F0/2 and F0/3 interfaces.
 
-PC3 ignores the packet, because the destination MAC address doesn’t match its own MAC address, it simply drops the packet. PC2 receives the packet and then processes it normally, [[OSI Model and TCP-IP Suite#Adjacent Layer Interactions|up the OSI stack]] (de-encapsulation).
+PC3 ignores the packet, because the destination MAC address doesn’t match its own MAC address, it simply drops the packet. PC2 receives the packet and then processes it normally, up the OSI stack (de-encapsulation).
 
 ## Known Unicast Frame
 
@@ -136,7 +147,7 @@ What's more, switch learns MAC address and the MAC address table indicates the i
 
 Just so we’re clear, the **switch uses the Source MAC Address field to fill its MAC address table**, because if it receives a frame from that source on the interface, it knows that it can reach than MAC address via that interface.
 
-# Address Resolution Protocol
+# Address Resolution Protocol (ARP)
 
 Now, let's go back the the previous step. 
 
@@ -178,8 +189,60 @@ Use command "arp -a" in CMD to view the ARP table (Windows, macOS, Linux).
 
 ![[ARP 4.png]]
 
+In Cisco IOS, use this command to view the ARP table.
+
+```
+SW#show arp
+```
+
+Here‘s the ARP table.
+
+![[ARP 5.png]]
+
 #ARP 
 
+Hopefully you understand this process a little better now:
+
+If device A wants to send traffic to device B, which is on the same network, device A has to use ARP to learn device B's MAC address, and then it can send traffic to device B.
+
+# MAC address table on a Cisco switch
+
+To view the MAC address table on a Cisco switch, we use these command.
+
+```
+SW#show mac address-table   #for newer versions
+SW#show-mac-address-table   #for old versions
+
+```
+
+![[MAC Table 1.png]]
+
+**Vlan** means **Virtual local area network**, **the default is 1**. We'll learn it later.
+
+Do you remember that? MAC addresses are removed from the MAC address table after 5 minutes of inactivity by default. This is known as **Aging**.
+
+We can manually remove all dynamic MAC addresses from the table using:
+
+```
+SW#clear mac address-table dynamic
+
+```
+
+![[MAC Table 2.png]]
+
+If you don't want to clear all of the MAC addresses from the table, you can add some additional option to the command.
+
+```
+SW#clear mac address-table dynamic addres 02fc.2ab1.fda2
+SW#clear mac address-table dynamic interface g0/0
+
+```
+
+# References
+
+>[Jeremy's IT Lab CCNA Day 5](https://www.youtube.com/watch?v=SDocmq1c05s&list=PLxbwE86jKRgMpuZuLBivzlM8s2Dk5lXBQ&index=9)
+>
+>[Jeremy's IT Lab CCNA Day 6](https://www.youtube.com/watch?v=5q1pqdmdPjo&list=PLxbwE86jKRgMpuZuLBivzlM8s2Dk5lXBQ&index=11)
 
 
 # Late collision
