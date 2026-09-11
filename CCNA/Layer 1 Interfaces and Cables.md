@@ -91,6 +91,8 @@ So, unless we are working with a network equipment that is quite old, we don't r
 
 ![[Auto MDI-X.png]]
 
+#MDI-X
+
 ## Pinouts for 1000BASE-T & 10GBASE-T
 
 ![[1000BAST-T.png]]
@@ -98,13 +100,6 @@ So, unless we are working with a network equipment that is quite old, we don't r
 In addition to using all four pairs of wires, in 1000BASE-T and 10GBAST-T, each pair is **[Bidirectional](https://dictionary.cambridge.org/dictionary/english/bidirectional?q=Bidirectional)**, which mean each pair isn't dedicated specifically to transmitting or receiving data.
 
 This is a part of the reason that they can operate at much faster speeds.
-
-
-
-
-
-
-
 
 ## ISO/IEC 11801 & TIA/EIA-568
 
@@ -138,6 +133,8 @@ Like RJ45, the SFP transceiver is used on the end of a **fiber optic cable**.
 
 Notice that we can use SFP on copper cables by using a copper SFP transceiver module or a Direct Attach Copper (DAC) cable.
 
+#SFP 
+
 ## Fiber Optic Cable
 
 Rather than a electrical signal over the copper wiring, these cable send light over glass fibers.
@@ -169,6 +166,8 @@ Therefore, multimode fiber allows longer cable than UTP, but shorter than single
 
 Multimode fiber is cheaper than single-mode fiber(due to cheaper LED-based SFP transmitters).
 
+#Multimode
+
 ### Single-mode Fiber
 
 ![[Single mode fiber cable.png]]
@@ -181,6 +180,8 @@ Single-mode fiber allows longer cables than both UTP and multimode fiber.
 
 Single-mode fiber is more expensive than multimode fiber (due to more expensive laser-based SFP transmitters).
 
+#Singlemode
+
 # Comparison between Copper and Fiber-Optic Cable 
 
 In the CCNA test, you will be questioned to compare these two types of cables.
@@ -190,6 +191,8 @@ This a summary of what we mentioned.
 ![[Comparison.png]]
 
 In addition, fiber-optic cables are more fragile than copper cables.
+
+# References
 
 >[Jeremy's IT Lab CCNA Day 2](https://www.youtube.com/watch?v=ieTH5lVhNaY&list=PLxbwE86jKRgMpuZuLBivzlM8s2Dk5lXBQ&index=4)
 >
