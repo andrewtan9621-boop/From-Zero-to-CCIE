@@ -37,7 +37,7 @@ And here's another table of some IEEE Standards for **Fiber-Optic cables**.
 |ER| Extended Range|
 
 
-# Copper UTP cable
+# Copper Cable Connections
 
 ## RJ-45
 ![[RJ-45 port.png]]
@@ -120,6 +120,18 @@ These terms, Cat5e and Cat6, define the copper cable specifications in other sta
 IEEE 802.3 defines the "traffic rules", but how fast you can actually transmit or receive data depends on the "road", these ISO/IEC or EIA copper cable parameters.
 
 > [How to understand the relationship between IEEE and these standards](https://zhuanlan.zhihu.com/p/2041217262988911140)
+
+## Shield Twisted Pair (STP) Cable
+
+![[STP Cable.png]]
+
+**STP cable (Shielded Twisted Pair) uses metallic foil or braided mesh shielding around wire pairs to block electromagnetic interference (EMI) and reduce internal crosstalk.**
+
+You might be asked to compare them in the exam, like this:
+
+![[Q600.png]]
+
+Basically we need to know that STP cables are more expensive and can transmit signal over longer distances.
 
 # Fiber-Optic Connections
 
