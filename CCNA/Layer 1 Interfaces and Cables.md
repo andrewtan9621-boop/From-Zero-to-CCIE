@@ -27,8 +27,18 @@ And here's another table of some IEEE Standards for **Fiber-Optic cables**.
 |10GBASE-LR|802.3ae|10 Gbps|S|10 km|
 |10GBASE-ER|802.3ae|10 Gbps|S|30 km|
 
+**M** means **Multimode**. **S** means **Single-Mode**.
+
+|Suffix|Meaning|
+|---|---|
+|LX| Long Wavelength|
+|SR| Short Range|
+|LR| Long Range|
+|ER| Extended Range|
+
 
 # Copper UTP cable
+
 ## RJ-45
 ![[RJ-45 port.png]]
 
@@ -108,15 +118,79 @@ These terms, Cat5e and Cat6, define the copper cable specifications in other sta
 |Governing TIA Standard|ANSI/TIA-568.2-D|ANSI/TIA-568.2-D|
 |Governing ISO Standard|ISO/IEC 11801 (Class D)|ISO/IEC 11801 (Class E)|
 |Maximum Bandwidth (Frequency)|Up to 100 MHz|Up to 250 MHz|
-|Max Data Rate (**Full Length - 100m**)|**1 Gbps** (Gigabit Ethernet)|**1 Gbps** (Gigabit Ethernet)|
-|Max Data Rate (Short Run)|2.5 Gbps / 5 Gbps (depending on run)|10 Gbps (up to **55 meters**)|
+|Max Data Rate (**Full Length - 100m**)|**1 Gbps** |**1 Gbps** |
+|Max Data Rate (Short Run)|2.5 Gbps / 5 Gbps |10 Gbps (up to **55 meters**)|
 |Physical Construction Note|Usually unshielded twisted pairs (UTP) without internal separator|Tighter twists; often includes a physical internal cross/spline separator|
 
 IEEE 802.3 defines the "traffic rules", but how fast you can actually transmit or receive data depends on the "road", these ISO/IEC or EIA copper cable parameters.
 
 > [How to understand the relationship between IEEE and these standards](https://zhuanlan.zhihu.com/p/2041217262988911140)
 
+# Fiber-Optic Connections
 
+## SFP Transceiver
 
-  
+![[SFP Transceiver.png]]
 
+SFP means Small Form-Factor Pluggable.
+
+Like RJ45, the SFP transceiver is used on the end of a **fiber optic cable**.
+
+Notice that we can use SFP on copper cables by using a copper SFP transceiver module or a Direct Attach Copper (DAC) cable.
+
+## Fiber Optic Cable
+
+Rather than a electrical signal over the copper wiring, these cable send light over glass fibers.
+
+![[Fiber transmit and receive.png]]
+
+Fiber optic cables also use separate cables to transmit and receive, like this.
+
+![[Figure 2-15.png]]
+
+A fiber optic cable consists of 4 or 5 layers:
+
+|Layer | Function |
+|---|---|
+|Fiber glass core | Light is transmitted down this core|
+|Cladding | Reflects the light|
+|Buffer | Protects the fiberglass from breaking|
+|Strengthener and Out Jacket| Enhance the protection|
+
+### Multimode Fiber
+
+![[Multimode Fiber.png]]
+
+In multimode fiber, the core, the actual glass fiber, is wider than single mode fiber.
+
+This wider core allows multiple angles, known as modes, of light waves to enter the fiber glass core. However, this causes **attenuation** over long distances.
+
+Therefore, multimode fiber allows longer cable than UTP, but shorter than single-mode fiber.
+
+Multimode fiber is cheaper than single-mode fiber(due to cheaper LED-based SFP transmitters).
+
+### Single-mode Fiber
+
+![[Single mode fiber cable.png]]
+
+In single-mode fiber, core [diameter](https://dictionary.cambridge.org/dictionary/english-chinese-traditional/diameter) is [narrower](https://dictionary.cambridge.org/dictionary/english-chinese-traditional/narrow?q=narrower) than multimode fiber.
+
+Light enters at a single angle from a laser-based transmitter.
+
+Single-mode fiber allows longer cables than both UTP and multimode fiber.
+
+Single-mode fiber is more expensive than multimode fiber (due to more expensive laser-based SFP transmitters).
+
+# Comparison between Copper and Fiber-Optic Cable 
+
+In the CCNA test, you will be questioned to compare these two types of cables.
+
+This a summary of what we mentioned.
+
+![[Comparison.png]]
+
+In addition, fiber-optic cables are more fragile than copper cables.
+
+>[Jeremy's IT Lab CCNA Day 2](https://www.youtube.com/watch?v=ieTH5lVhNaY&list=PLxbwE86jKRgMpuZuLBivzlM8s2Dk5lXBQ&index=4)
+>
+>CCNA 200-301 Official Guidebook Volume1 Chapter 2

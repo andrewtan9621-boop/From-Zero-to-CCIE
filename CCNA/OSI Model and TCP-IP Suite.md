@@ -77,6 +77,6 @@ Routers are layer 3 devices, so they want to know the layer 3 IP address to know
 At Host B, de-encapsulation takes place once more. At the link layer it is a frame. The header and trailer are removed, and it becomes a packet. At the Internet layer the header is removed, and it becomes a segment. Finally, the transport layer header is removed, and the application layer on Host B receives the data and interacts with the application on Host B.
 
 
->[Jeremy's IT lab CCNA Day 3](https://www.youtube.com/watch?v=yM-XNq9ADlI&list=PLxbwE86jKRgMpuZuLBivzlM8s2Dk5lXBQ&index=6)
+>[Jeremy's IT Lab CCNA Day 3](https://www.youtube.com/watch?v=yM-XNq9ADlI&list=PLxbwE86jKRgMpuZuLBivzlM8s2Dk5lXBQ&index=6)
 >
 >CCNA 200-301 Official Guidebook Volume1 Chapter 1
