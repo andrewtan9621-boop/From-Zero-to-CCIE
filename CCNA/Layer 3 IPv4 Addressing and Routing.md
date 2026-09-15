@@ -20,7 +20,7 @@ Now, let's look at the **Source IP address** and the **Destination IP address**.
 
 These fields, as well as IP addresses, are 32-bits or 4 bytes in length.
 
-## IPv4 addresses
+## IPv4 Addresses
 
 ![[IPv4 address.png]]
 
@@ -34,7 +34,35 @@ You'll often hear each of these 8 bit groups referred to as **Octet**.
 
 You should watch the video in the end to master decimal-to-binary or binary-to-decimal conversion.
 
+## IPv4 Address Classes
 
+Now, IPv4 addresses are split up into 5 different ‘classes’. The class of an IPv4 address is determined by the first octet of the address.
+
+| | Class| First octet | First octet numerical range| Prefix Length |
+|---|---|---|---|---|
+||A|0xxxxxxx|0-126 (127)| /8|
+||B|10xxxxxx|128-191| /16|
+||C|110xxxxx|192-223| /24|
+|multicast addresses|D|1110xxxx|224-239| |
+|reserved (experimental)|E|1111xxxx|240-255| |
+
+### Loopback Addresses 127.0.0.0/8
+
+Address range 127.0.0.0-127.255.255.255 are used to test the **network stack** on the local device.
+
+If we ping an IP address in this range, the PC is just sending and receiving these pings to and from itself.
+
+![[Loopback Address.png]]
+
+### Network Address
+
+**The first address in each network is the network address, it cannot be assigned to hosts.**
+
+### Broadcast Address
+
+**The last address of the network is the broadcast address, the Layer 3 address used when you want to send traffic to all hosts on the local network, it also cannot be assigned to hosts.**
+
+### Netmask
 
 
 
