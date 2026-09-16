@@ -193,3 +193,5 @@ interface Ethernet0/1
     ```
     
     - _Verification Success Criteria:_ Ping response rate should show 100% success (`!!!!!`).
+
+![[q200.png]]
