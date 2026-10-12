@@ -54,28 +54,51 @@ If we ping an IP address in this range, the PC is just sending and receiving the
 
 ![[Loopback Address.png]]
 
-### Network Address
+### IPv4 Network Address
 
 **The first address in each network is the network address, it cannot be assigned to hosts.**
 
-### Broadcast Address
+### IPv4 Broadcast Address
 
 **The last address of the network is the broadcast address, the Layer 3 address used when you want to send traffic to all hosts on the local network, it also cannot be assigned to hosts.**
 
 ### Netmask
 
+When we configure or allocate IPv4 address, it is impossible to enter hundreds and thousands addresses one by one. So, we represent an entire IP address block by appending the **prefix length** to the address.
 
+There are two format to express a prefix length. One is like "/8", "/24", etc.
 
+Cisco devices still use an older, slightly more complicated way of writing the prefix length: **a dotted decimal netmask**.
 
-# Routing 
+![[Netmask.png]]
 
-![[Routing 1.png]]
+In binary, "1" indicates the **Network portion**, and "0" indicates the **Host portion**.
 
-Router splits the network into 2 LANs.
+Network portion is the code to identify a network. For example, 192.168.0.0/24 and 192.168.1.0/24 indicate two different networks. So, we could create 128 networks in Class A, from 0.0.0.0/8 to 127.0.0.0/8. 
 
-If PC1 sends a frame to the broadcast MAC address, SW1 will receive the frame and forward it out of all of interfaces except the frame was received on. PC2 and R1 receive the frame.
+Host portion is the code to identify a host. For example, 192.168.1.1 and 192.168.1.2 indicate two different hosts in one network.
 
-![[Routing 2.png]]
+Think of "1" as "Block/Lock" and "0“ as "Open/Free".
 
-However, that’s where it ends. **The broadcast is limited to the local network, it doesn’t cross the router.**
+Therefore, "192.168.0.0/24" or "192.168.0.0  255.255.255.0" indicates a block of 256 addresses from 192.168.0.0 to 192.168.0.255.
 
+Did you remember the Network and Broadcast address? In the 192.168.0.0/24 block, 192.168.0.0 is the Network address, and 192.168.0.255 is the Broadcast address. They cannot be assigned to hosts. 
+
+From 192.168.0.1 to 192.168.0.254, these 254 addresses are host addresses. Each address represents a network user in the 192.168.0.0/24 block, if you allocated an address to them.
+
+Of course, network 192.168.0.0/24 belongs to Class C.
+
+### Maximum Hosts per Network
+
+My smart reader, you must have figured out the answer of how to calculate maximum hosts for an IPv4 address block. It equals to **Addresses per network - 2**. 
+
+Try to calculate the maximum hosts per network for each network class now! The answer is here, and are you right?
+
+| Class | Maximum Hosts per Network|
+| --- | --- |
+| A | 256 × 256 × 256 -2|
+| B | 256 × 256 - 2|
+| C | 256 -2 |
+
+> [Jeremy's IT Lab CCNA Day 7 & 8](https://www.youtube.com/watch?v=3ROdsfEUuhs&list=PLxbwE86jKRgMpuZuLBivzlM8s2Dk5lXBQ&index=13)
+> [[6.2 Router Configuration-Interface]]

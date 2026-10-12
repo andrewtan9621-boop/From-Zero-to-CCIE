@@ -174,7 +174,9 @@ Before sending the original frame, PC1 has to send ARP Request frame.
 
 In ARP Request frame, **Dst MAC address ‘FFFF.FFFF.FFFF’ is the broadcast MAC address**. 
 
-When SW1 receives ARP Request frame from G0/0, it will broadcast the frame out of all of its interfaces, except the one it was received on. PC2 drops the frame. SW2 floods the frame to PC3 and PC4.
+When SW1 receives ARP Request frame from G0/0, it will flood the frame out of all of its interfaces, except the one it was received on. PC2 drops the frame. SW2 floods the frame to PC3 and PC4.
+
+**The flood is limited to the local network, it doesn’t cross a router.**
 
 ## ARP Reply
 After receiving the ARP Request frame, PC3 send the ARP Reply frame. It can send the ARP reply directly to PC1, without having to broadcast the frame.

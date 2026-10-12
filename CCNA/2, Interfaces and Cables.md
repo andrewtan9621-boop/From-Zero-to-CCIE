@@ -39,7 +39,7 @@ And here's another table of some IEEE Standards for **Fiber-Optic cables**.
 
 # Copper Cable Connections
 
-## RJ-45
+## RJ-45 Connector
 ![[RJ-45 port.png]]
 
 Lots of devices connect to the wired network using **RJ-45** ports (RJ means Registered Jack). 
@@ -133,6 +133,8 @@ You might be asked to compare them in the exam, like this:
 
 Basically we need to know that STP cables are more expensive and can transmit signal over longer distances.
 
+In the end, notice that **each type of cable requires its corresponding RJ45 connector** in practical works.
+
 # Fiber-Optic Connections
 
 ## SFP Transceiver
@@ -194,6 +196,27 @@ Single-mode fiber is more expensive than multimode fiber (due to more expensive 
 
 #Singlemode
 
+### Fiber Connector
+
+![[Fiber connector.png]]
+
+#### SC connector
+
+In modern optic networks, SC connectors might be very common. You could see them on the **Optical Network Terminal (ONT)** in your home.
+
+The color blue distinguishes it as an **Ultra Physical Contact (UPC)"**, which is used to transmit **digital signals**, such as Ethernet frames.
+![[UPC.png]]
+
+And then, there is a green one, **Angled Physical Contact (APC)**, which is used to transmit **analog signals**, such as cable TV signal.
+![[APC.png]]
+
+#### LC connector
+
+![[LC.png]] 
+
+LC has a smaller size to alleviate the shortage of space in Internet Data Center (IDC), which makes them the standard interfaces of SFP modules. And then, blue and green distinguish between two different types.  
+
+In the CCNA exam, you might be questioned about the SC to LC adapter.
 
 
 # Comparison between Copper and Fiber-Optic Cable 
@@ -211,3 +234,7 @@ In addition, fiber-optic cables are more fragile than copper cables.
 >[Jeremy's IT Lab CCNA Day 2](https://www.youtube.com/watch?v=ieTH5lVhNaY&list=PLxbwE86jKRgMpuZuLBivzlM8s2Dk5lXBQ&index=4)
 >
 >CCNA 200-301 Official Guidebook Volume1 Chapter 2
+>
+>[蓝色上网、绿色看电视？光猫上的光纤接头一次看懂｜SC/UPC、SC/APC、热熔冷接、FTTR_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1c6HX6GEEj/?spm_id_from=333.1007.top_right_bar_window_history.content.click&vd_source=fac47894cc514f77fd5981bcde0f5ead)
+>
+>[光纤接头进化史下集：FC 拧、ST 卡、SC 推、LC 减半，TOSLINK 光纤音频、机房 SFP/LC/MPO、光猫棒一次理清_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1KJpn68Ejz/?spm_id_from=333.1387.homepage.video_card.click&vd_source=fac47894cc514f77fd5981bcde0f5ead)

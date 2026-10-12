@@ -1,5 +1,5 @@
-[[1 OSI Model and TCP-IP Suite]]
+[[1, OSI Model and TCP-IP Suite]]
 
-[[Layer 3 Ping]]
+[[6.1 Layer 3 ICMP Ping]]
 
-[[Layer 3 IPv4 Addressing and Routing]]
+[[6, Layer 3 IPv4 Addressing and Routing]]

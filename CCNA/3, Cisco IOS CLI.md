@@ -1,4 +1,4 @@
-This is the fundamental knowledge about how to configure a Cisco [[Layer 2 Ethernet LAN Switching|Switch]] or [[Layer 3 IPv4 Addressing and Routing|Router]].
+This is the fundamental knowledge about how to configure a Cisco [[4, Layer 2 Ethernet LAN Switching|Switch]] or [[6, Layer 3 IPv4 Addressing and Routing|Router]]. I highly recommend you watching the video, and configure them first hand.
 
 # CLI and GUI
 
