@@ -79,7 +79,7 @@ Therefore the minimum payload size is 46 bytes (64 bytes-18 bytes).
 
 If the payload is less than 46 bytes, [padding](https://dictionary.cambridge.org/dictionary/english-chinese-traditional/padding?q=padding+) bytes are added, and these bytes are all 0s.
 
-For example, if we If we send 36-byte [[Layer 3 Ping|pings]], there should be 10 bytes of padding, because the minimum payload size for an Ethernet frame is 46 bytes. 
+For example, if we If we send 36-byte pings, there should be 10 bytes of padding, because the minimum payload size for an Ethernet frame is 46 bytes. 
 
 ![[Padding.png]]
 
