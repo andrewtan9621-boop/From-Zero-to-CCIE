@@ -59,7 +59,7 @@ Before we start, we need to know that different network devices use different pi
 
 ![[Device pin pairs.png]]
 
-## Pinouts for 10BASE-T & 100BASE-T
+## 10BASE-T & 100BASE-T
 ### Straight-through Cable
 
 To connect devices that transmit and receive on opposite pin pairs, we use straight-through cable.
@@ -93,7 +93,7 @@ So, unless we are working with a network equipment that is quite old, we don't r
 
 #MDI-X
 
-## Pinouts for 1000BASE-T & 10GBASE-T
+## 1000BASE-T & 10GBASE-T
 
 ![[1000BAST-T.png]]
 
@@ -193,6 +193,8 @@ Single-mode fiber allows longer cables than both UTP and multimode fiber.
 Single-mode fiber is more expensive than multimode fiber (due to more expensive laser-based SFP transmitters).
 
 #Singlemode
+
+
 
 # Comparison between Copper and Fiber-Optic Cable 
 

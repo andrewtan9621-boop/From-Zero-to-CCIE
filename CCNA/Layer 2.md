@@ -1,4 +1,4 @@
 
-[[OSI Model and TCP-IP Suite]]
+[[1 OSI Model and TCP-IP Suite]]
 
 [[Layer 2 Ethernet LAN Switching]]

@@ -1,3 +1,3 @@
-[[Interfaces and Cables]]
+[[2 Interfaces and Cables]]
 
-[[OSI Model and TCP-IP Suite]]
+[[1 OSI Model and TCP-IP Suite]]
