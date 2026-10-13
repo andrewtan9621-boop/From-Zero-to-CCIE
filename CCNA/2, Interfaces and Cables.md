@@ -218,6 +218,7 @@ LC has a smaller size to alleviate the shortage of space in Internet Data Center
 
 In the CCNA exam, you might be questioned about the SC to LC adapter.
 
+![[Pasted image 20261013145425.png]]
 
 # Comparison between Copper and Fiber-Optic Cable 
 
